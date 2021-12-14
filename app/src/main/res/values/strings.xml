@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PetShop</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="firstFragment">First Fragment</string>
+    <string name="secondFragment">Second Fragment</string>
+    <string name="thirdFragment">Third Fragment</string>
+</resources>
