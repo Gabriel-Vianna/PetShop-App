@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".fragments.SecondFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -15,6 +15,7 @@
             android:id="@+id/imageView7"
             android:layout_width="195dp"
             android:layout_height="150dp"
+            android:contentDescription="@string/contentDescriptionProfileImage"
             android:layout_marginTop="32dp"
             android:src="@drawable/luke"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,8 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:text="Histórico"
-            android:textSize="20dp"
+            android:text="@string/history"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.055"
@@ -42,7 +43,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="50dp"
             android:textStyle="bold"
-            android:text="Nome: Luke"
+            android:text="@string/profileName"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Idade: 4 Anos"
+            android:text="@string/profileAge"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -62,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="27dp"
-            android:text="Raça: SRD"
+            android:text="@string/profileBreed"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 

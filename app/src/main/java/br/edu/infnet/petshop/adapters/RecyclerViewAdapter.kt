@@ -1,22 +1,24 @@
-package br.edu.infnet.petshop
+package br.edu.infnet.petshop.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import br.edu.infnet.petshop.R
+import br.edu.infnet.petshop.viewModel.ServicesModel
 import kotlinx.android.synthetic.main.row.view.*
 
-class MyAdapter(private val arrayList: ArrayList<ViewModel>, val context: Context):
-    RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class RecyclerViewAdapter(private val arrayList: ArrayList<ServicesModel>, val context: Context):
+    RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        fun bindItems(viewModel: ViewModel) {
-            itemView.titleTv.text = viewModel.title
-            itemView.attendanceTv.text = viewModel.attendance
-            itemView.daysTv.text = viewModel.days
-            itemView.hourTv.text = viewModel.hour
-            itemView.priceTv.text = viewModel.value
-            itemView.imageTv.setImageResource(viewModel.image)
+        fun bindItems(servicesModel: ServicesModel) {
+            itemView.titleTv.text = servicesModel.title
+            itemView.attendanceTv.text = servicesModel.attendance
+            itemView.daysTv.text = servicesModel.days
+            itemView.hourTv.text = servicesModel.hour
+            itemView.priceTv.text = servicesModel.value
+            itemView.imageTv.setImageResource(servicesModel.image)
         }
     }
 

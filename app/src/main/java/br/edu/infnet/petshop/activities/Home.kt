@@ -1,9 +1,10 @@
-package br.edu.infnet.petshop
+package br.edu.infnet.petshop.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TableLayout
+import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
+import br.edu.infnet.petshop.R
 import br.edu.infnet.petshop.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -33,5 +34,8 @@ class Home : AppCompatActivity() {
                 }
             }
         }.attach()
+    }
+    private fun alert(stringAlert: String) {
+        Toast.makeText(this, stringAlert, Toast.LENGTH_LONG).show()
     }
 }

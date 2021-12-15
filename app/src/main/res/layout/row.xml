@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,19 +20,18 @@
             android:id="@+id/imageTv"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@mipmap/ic_launcher" />
+            android:contentDescription="@string/contentDescriptionServiceImage"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/titleTv"
-            android:text="Title"
             android:textSize="22sp"
             android:textStyle="bold"
             android:textColor="@color/blackColor"
-            android:layout_toRightOf="@id/imageTv"
             android:layout_toEndOf="@id/imageTv"
-            android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"/>
 
         <TextView
@@ -40,10 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/titleTv"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_toEndOf="@id/imageTv"
-            android:layout_toRightOf="@id/imageTv"
-            android:text="price"
             android:textColor="@color/blackColor"
             android:textSize="18sp" />
 
@@ -53,11 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/priceTv"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:layout_toEndOf="@id/imageTv"
-            android:layout_toRightOf="@id/imageTv"
-            android:text="Atendimento:"
             android:textColor="@color/blackColor"
             android:textSize="18sp" />
 
@@ -67,11 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/attendanceTv"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/imageTv"
-            android:layout_toRightOf="@id/imageTv"
-            android:text="days of week"
             android:textColor="@color/blackColor"
             android:textSize="18sp" />
 
@@ -80,11 +71,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/attendanceTv"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@id/daysTv"
-            android:layout_toRightOf="@id/daysTv"
-            android:text="hours"
             android:textColor="@color/blackColor"
             android:textSize="18sp" />
 
