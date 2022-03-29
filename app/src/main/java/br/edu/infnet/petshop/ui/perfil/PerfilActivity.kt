@@ -6,15 +6,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.petshop.R
 import br.edu.infnet.petshop.ServicosModel
-import br.edu.infnet.petshop.ui.servicos.ServicoAdapter
-import kotlinx.android.synthetic.main.activity_perfil.*
+import br.edu.infnet.petshop.databinding.ActivityPerfilBinding
+import br.edu.infnet.petshop.ui.listaservicos.ServicoItemAdapter
+import kotlinx.android.synthetic.main.activity_perfil.recyclerViewHistory
 
 class PerfilActivity : AppCompatActivity() {
-    private var servicoAdapter: RecyclerView.Adapter<ServicoAdapter.ViewHolder>? = null
+
+    private var servicoItemAdapter: RecyclerView.Adapter<ServicoItemAdapter.ViewHolder>? = null
+    lateinit var binding: ActivityPerfilBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_perfil)
+        binding = ActivityPerfilBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val arrayList = ArrayList<ServicosModel>()
 
@@ -29,10 +33,10 @@ class PerfilActivity : AppCompatActivity() {
         )
         )
 
-        recyclerViewHistory.adapter = servicoAdapter
+        recyclerViewHistory.adapter = servicoItemAdapter
         recyclerViewHistory.apply {
             layoutManager = LinearLayoutManager(this.context)
-            adapter = ServicoAdapter(arrayList, this.context)
+            adapter = ServicoItemAdapter(arrayList, this.context)
         }
     }
 

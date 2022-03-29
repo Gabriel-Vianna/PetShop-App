@@ -4,26 +4,26 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import br.edu.infnet.petshop.R
-import kotlinx.android.synthetic.main.acitivity_contato.emailAddress
-import kotlinx.android.synthetic.main.acitivity_contato.phoneCall
-
+import br.edu.infnet.petshop.databinding.AcitivityContatoBinding
 class ContatoActivity : AppCompatActivity() {
+
+    lateinit var binding: AcitivityContatoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.acitivity_contato)
+        binding = AcitivityContatoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val phoneNumber = phoneCall.text.toString()
-        val email = emailAddress.text.toString()
-        phoneCall.setOnClickListener{
+        val phoneNumber = binding.phoneCall.text.toString()
+        val email = binding.emailAddress.text.toString()
+        binding.phoneCall.setOnClickListener{
             val intentPhoneCall = Intent(Intent.ACTION_DIAL).apply {
                 data = Uri.parse("tel:$phoneNumber")
             }
             startActivity(intentPhoneCall)
         }
 
-        emailAddress.setOnClickListener{
+        binding.emailAddress.setOnClickListener{
             val intentMail = Intent(Intent.ACTION_SEND).apply {
                 data = Uri.parse("mailto:$email")
             }

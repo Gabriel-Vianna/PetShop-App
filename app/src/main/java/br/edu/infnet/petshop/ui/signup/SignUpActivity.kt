@@ -1,22 +1,26 @@
 package br.edu.infnet.petshop.ui.signup
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import br.edu.infnet.petshop.R
+import br.edu.infnet.petshop.databinding.ActivitySignUpBinding
 import br.edu.infnet.petshop.ui.MainActivity
 import com.google.android.material.textfield.TextInputLayout
 
 
 class SignUpActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivitySignUpBinding
     private val emailLiveData = MutableLiveData<String>()
     private val passwordLiveData = MutableLiveData<String>()
     private val passwordConfirmationLiveData = MutableLiveData<String>()
+
     private val isValidLiveData = MediatorLiveData<Boolean>().apply { this.value = false
         addSource(emailLiveData) { email ->
             val password = passwordLiveData.value
@@ -49,9 +53,8 @@ class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
-
-
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         var btnSignUp = findViewById<Button>(R.id.buttonSignUp)
         var editTextEmail = findViewById<TextInputLayout>(R.id.editTextEmail)

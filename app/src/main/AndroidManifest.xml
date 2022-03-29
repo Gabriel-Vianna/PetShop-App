@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShop">
-        <activity android:name=".ui.servicoescolhido.ServicoEscolhidoActivity"></activity>
+        <activity android:name=".ui.servico.ServicoActivity"></activity>
         <activity
             android:name=".ui.signup.SignUpActivity"
             android:exported="false" />

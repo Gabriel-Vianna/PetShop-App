@@ -59,6 +59,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="ana@oi.com"
             android:textColorHint="#757575"
             android:singleLine="true"
             tools:ignore="TextContrastCheck" />
@@ -93,6 +94,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="123456"
             android:textColorHint="#757575"
             android:singleLine="true"
             tools:ignore="TextContrastCheck" />
@@ -126,6 +128,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="123456"
             android:textColorHint="#757575"
             android:singleLine="true"
             tools:ignore="TextContrastCheck" />
