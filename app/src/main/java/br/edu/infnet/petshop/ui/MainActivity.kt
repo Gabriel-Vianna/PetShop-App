@@ -1,4 +1,4 @@
-package br.edu.infnet.petshop.activities
+package br.edu.infnet.petshop.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.infnet.petshop.R
+import br.edu.infnet.petshop.ui.home.Home
+import br.edu.infnet.petshop.ui.signup.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions

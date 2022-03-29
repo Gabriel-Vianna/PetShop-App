@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetShop">
+        <activity android:name=".ui.servicoescolhido.ServicoEscolhidoActivity"></activity>
         <activity
-            android:name=".activities.SignUpActivity"
+            android:name=".ui.signup.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.Home"
+            android:name=".ui.home.Home"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

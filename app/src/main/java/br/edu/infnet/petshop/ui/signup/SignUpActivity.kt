@@ -1,4 +1,4 @@
-package br.edu.infnet.petshop.activities
+package br.edu.infnet.petshop.ui.signup
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import br.edu.infnet.petshop.R
+import br.edu.infnet.petshop.ui.MainActivity
 import com.google.android.material.textfield.TextInputLayout
 
 

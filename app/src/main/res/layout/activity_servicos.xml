@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.FirstFragment">
+    tools:context=".ui.servicos.ServicosActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_servicos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView">
+        android:layout_height="wrap_content" >
 
     </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>
