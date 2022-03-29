@@ -1,6 +1,6 @@
 package br.edu.infnet.petshop
 
-class ServicosModel(
+class ServicoModel(
     val title: String,
     val attendance: String,
     val days: String,

@@ -14,6 +14,15 @@
             android:name=".ui.signup.SignUpActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.contato.ContatoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.listaservicos.ListaServicosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.perfil.PerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.Home"
             android:exported="false" />
         <activity

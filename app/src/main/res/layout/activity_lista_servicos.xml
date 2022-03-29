@@ -5,12 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.listaservicos.ListaServicosActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:text="servicos"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaServicos"
         android:layout_width="match_parent"

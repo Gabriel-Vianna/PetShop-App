@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.petshop.R
-import br.edu.infnet.petshop.ServicosModel
+import br.edu.infnet.petshop.ServicoModel
 import br.edu.infnet.petshop.databinding.ActivityPerfilBinding
 import br.edu.infnet.petshop.ui.listaservicos.ServicoItemAdapter
 import kotlinx.android.synthetic.main.activity_perfil.recyclerViewHistory
@@ -20,15 +20,15 @@ class PerfilActivity : AppCompatActivity() {
         binding = ActivityPerfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val arrayList = ArrayList<ServicosModel>()
+        val arrayList = ArrayList<ServicoModel>()
 
         arrayList.add(
-            ServicosModel("Banho", "Serviço realizado em:", "01/12/2021", "14:00h", "R$50,00",
+            ServicoModel("Banho", "Serviço realizado em:", "01/12/2021", "14:00h", "R$50,00",
             R.drawable.banho_logo
         )
         )
         arrayList.add(
-            ServicosModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+            ServicoModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
             R.drawable.tosa_logo
         )
         )

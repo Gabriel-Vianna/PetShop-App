@@ -5,37 +5,37 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.edu.infnet.petshop.R
-import br.edu.infnet.petshop.ServicosModel
+import br.edu.infnet.petshop.ServicoModel
 import br.edu.infnet.petshop.databinding.ActivityListaServicosBinding
 
 class ListaServicosActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityListaServicosBinding
     lateinit var layoutManager: LinearLayoutManager
-    lateinit var servicoItemAdapter: RecyclerView.Adapter<ServicoItemAdapter.ViewHolder>
+    private var servicoItemAdapter: RecyclerView.Adapter<ServicoItemAdapter.ViewHolder>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityListaServicosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val arrayList = ArrayList<ServicosModel>()
+        val arrayList = ArrayList<ServicoModel>()
         val recyclerView = binding.listaServicos
 
         arrayList.add(
-            ServicosModel(
+            ServicoModel(
                 "Banho", "Atendimento:", "Segunda a sexta", "8h-15h", "R$50,00",
                 R.drawable.banho_logo
             )
         )
         arrayList.add(
-            ServicosModel(
+            ServicoModel(
                 "Tosa", "Atendimento:", "Segunda a sexta", "8h-15h", "R$70,00",
                 R.drawable.tosa_logo
             )
         )
         arrayList.add(
-            ServicosModel(
+            ServicoModel(
                 "Vacina",
                 "Atendimento:",
                 "Segunda a sexta",
@@ -45,13 +45,13 @@ class ListaServicosActivity : AppCompatActivity() {
             )
         )
         arrayList.add(
-            ServicosModel(
+            ServicoModel(
                 "Consulta", "Atendimento:", "Segunda a sexta", "8h-15h", "R$50,00",
                 R.drawable.consulta_logo
             )
         )
         arrayList.add(
-            ServicosModel(
+            ServicoModel(
                 "Taxi Dog",
                 "Atendimento:",
                 "Segunda a sexta",

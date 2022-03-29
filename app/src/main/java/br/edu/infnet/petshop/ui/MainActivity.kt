@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.infnet.petshop.R
-import br.edu.infnet.petshop.ui.home.Home
+import br.edu.infnet.petshop.ui.listaservicos.ListaServicosActivity
 import br.edu.infnet.petshop.ui.signup.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun goToHomeActivity() {
-        var homeActivity = Intent(this, Home::class.java)
+        var homeActivity = Intent(this, ListaServicosActivity::class.java)
         startActivity(homeActivity)
     }
 
