@@ -38,6 +38,12 @@ class SecondFragment : Fragment() {
         arrayList.add(ServicesModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
             R.drawable.tosa_logo
         ))
+        arrayList.add(ServicesModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+            R.drawable.tosa_logo
+        ))
+        arrayList.add(ServicesModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+            R.drawable.tosa_logo
+        ))
 
         recyclerViewHistory.adapter = recyclerViewAdapter
         recyclerViewHistory.apply {
