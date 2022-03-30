@@ -20,6 +20,12 @@
             android:name=".activities.Home"
             android:exported="false" />
         <activity
+            android:name=".activities.ServicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

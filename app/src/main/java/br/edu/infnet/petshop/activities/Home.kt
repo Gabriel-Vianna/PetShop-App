@@ -1,18 +1,16 @@
 package br.edu.infnet.petshop.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.Toast
-import androidx.viewpager2.widget.ViewPager2
 import br.edu.infnet.petshop.R
-import br.edu.infnet.petshop.adapters.ViewPagerAdapter
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 
 class Home : AppCompatActivity() {
     private var mInterstitialAd: InterstitialAd? = null
@@ -53,26 +51,19 @@ class Home : AppCompatActivity() {
 
         }
 
-        val tabLayout = findViewById<TabLayout>(R.id.tab_layout)
-        val viewPager2 = findViewById<ViewPager2>(R.id.view_pager2)
+        var btnServices = findViewById<Button>(R.id.listaServicos)
+        var btnAccount = findViewById<Button>(R.id.minhaConta)
+        var btnStore = findViewById<Button>(R.id.lojaInfo)
 
-        val adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+        btnServices.setOnClickListener{
+            var serviceActivity = Intent(this, ServicesActivity::class.java)
+            startActivity(serviceActivity)
+        }
 
-        viewPager2.adapter = adapter
-
-        TabLayoutMediator(tabLayout, viewPager2){tab, position ->
-            when(position) {
-                0 -> {
-                    tab.text = "Serviços"
-                }
-                1 -> {
-                    tab.text = "Perfil"
-                }
-                2 -> {
-                    tab.text = "Contato"
-                }
-            }
-        }.attach()
+        btnAccount.setOnClickListener{
+            var accountActivity = Intent(this, AccountActivity::class.java)
+            startActivity(accountActivity)
+        }
     }
 
     fun startAdSense(view: View) {
