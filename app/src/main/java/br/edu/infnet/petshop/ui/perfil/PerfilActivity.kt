@@ -23,20 +23,35 @@ class PerfilActivity : AppCompatActivity() {
         val arrayList = ArrayList<ServicoModel>()
 
         arrayList.add(
-            ServicoModel("Banho", "Serviço realizado em:", "01/12/2021", "14:00h", "R$50,00",
-            R.drawable.banho_logo
-        )
+            ServicoModel(
+                "Banho", "Serviço realizado em:", "01/12/2021", "14:00h", "R$50,00",
+                R.drawable.banho_logo
+            )
         )
         arrayList.add(
-            ServicoModel("Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
-            R.drawable.tosa_logo
+            ServicoModel(
+                "Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+                R.drawable.tosa_logo
+            )
         )
+        arrayList.add(
+            ServicoModel(
+                "Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+                R.drawable.tosa_logo
+            )
         )
+        arrayList.add(
+            ServicoModel(
+                "Tosa", "Serviço realizado em:", "01/12/2021", "13:00h", "R$70,00",
+                R.drawable.tosa_logo
+            )
+        )
+
 
         recyclerViewHistory.adapter = servicoItemAdapter
         recyclerViewHistory.apply {
-//            layoutManager = LinearLayoutManager(this.context)
-//            adapter = ServicoItemAdapter(arrayList, this.context)
+            layoutManager = LinearLayoutManager(this.context)
+            adapter = PerfilServicoItemAdapter(arrayList, this.context)
         }
     }
 

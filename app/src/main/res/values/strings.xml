@@ -32,6 +32,7 @@
     <string name="profileName">Nome: Luke</string>
     <string name="profileAge">Idade: 4 Anos</string>
     <string name="profileBreed">Raça: SRD</string>
+    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 
     <string-array name="horariosArray">
         <item>08:00</item>
