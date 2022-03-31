@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.infnet.petshop.R
 import br.edu.infnet.petshop.databinding.ActivitySignInBinding
+import br.edu.infnet.petshop.ui.home.HomeActivity
 import br.edu.infnet.petshop.ui.listaservicos.ListaServicosActivity
 import br.edu.infnet.petshop.ui.signup.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -89,7 +90,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun goToServicosActivity() {
-        var servicosActivity = Intent(this, ListaServicosActivity::class.java)
+        var servicosActivity = Intent(this, HomeActivity::class.java)
         startActivity(servicosActivity)
     }
 

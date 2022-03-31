@@ -15,7 +15,8 @@ class ServicoActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val servico = ServicoEnum.getById(intent.getStringExtra("SERVICO")!!.toInt())
+        servico?.image?.let { binding.imagemServico.setImageResource(it) }
         binding.tituloServico.text = servico?.title
-        binding.subtituloServico.text = servico?.attendance
+        binding.subtituloServico.text = "${servico?.days}, ${servico?.hour}"
     }
 }

@@ -50,4 +50,12 @@
         <item>14:00</item>
         <item>14:30</item>
     </string-array>
+
+    <string-array name="diasArray">
+        <item>Segunda-feira</item>
+        <item>Terça-feira</item>
+        <item>Quarta-feira</item>
+        <item>Quinta-feira</item>
+        <item>Sexta-feira</item>
+    </string-array>
 </resources>
