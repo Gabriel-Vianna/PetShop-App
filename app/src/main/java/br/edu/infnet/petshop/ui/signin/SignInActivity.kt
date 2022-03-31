@@ -7,9 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.infnet.petshop.R
-import br.edu.infnet.petshop.databinding.ActivitySignInBinding
 import br.edu.infnet.petshop.ui.home.HomeActivity
-import br.edu.infnet.petshop.ui.listaservicos.ListaServicosActivity
+import br.edu.infnet.petshop.databinding.ActivitySignInBinding
 import br.edu.infnet.petshop.ui.signup.SignUpActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -55,7 +54,7 @@ class SignInActivity : AppCompatActivity() {
             if (extras != null) {
                 if(textViewEmail == extras.getString("email") && textViewPassword == extras.getString("password")) {
                     alert("Login realizado com sucesso!")
-                    goToServicosActivity()
+                    goToHomeActivity()
                     finish()
                 }else {
                     alert("Email ou senha incorretos")
@@ -79,7 +78,7 @@ class SignInActivity : AppCompatActivity() {
         try {
             val account = completedTask.getResult(ApiException::class.java)
 
-            goToServicosActivity()
+            goToHomeActivity()
         } catch (e: ApiException) {
 
         }
@@ -89,7 +88,7 @@ class SignInActivity : AppCompatActivity() {
         Toast.makeText(this, stringAlert, Toast.LENGTH_LONG).show()
     }
 
-    private fun goToServicosActivity() {
+    private fun goToHomeActivity() {
         var servicosActivity = Intent(this, HomeActivity::class.java)
         startActivity(servicosActivity)
     }

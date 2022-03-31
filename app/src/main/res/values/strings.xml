@@ -33,6 +33,9 @@
     <string name="profileAge">Idade: 4 Anos</string>
     <string name="profileBreed">Raça: SRD</string>
     <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="servicesActivity">Serviços</string>
+    <string name="storeActivity">Informações do PetShop</string>
+    <string name="accountActivity">Minha conta</string>
 
     <string-array name="horariosArray">
         <item>08:00</item>
