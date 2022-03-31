@@ -35,8 +35,8 @@ class PerfilActivity : AppCompatActivity() {
 
         recyclerViewHistory.adapter = servicoItemAdapter
         recyclerViewHistory.apply {
-            layoutManager = LinearLayoutManager(this.context)
-            adapter = ServicoItemAdapter(arrayList, this.context)
+//            layoutManager = LinearLayoutManager(this.context)
+//            adapter = ServicoItemAdapter(arrayList, this.context)
         }
     }
 

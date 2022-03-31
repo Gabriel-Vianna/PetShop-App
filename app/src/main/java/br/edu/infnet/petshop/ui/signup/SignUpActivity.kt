@@ -10,7 +10,7 @@ import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import br.edu.infnet.petshop.R
 import br.edu.infnet.petshop.databinding.ActivitySignUpBinding
-import br.edu.infnet.petshop.ui.MainActivity
+import br.edu.infnet.petshop.ui.signin.SignInActivity
 import com.google.android.material.textfield.TextInputLayout
 
 
@@ -88,7 +88,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun goToSignInActivity(email: String, password: String) {
-        var signInActivity = Intent(this, MainActivity::class.java)
+        var signInActivity = Intent(this, SignInActivity::class.java)
         signInActivity.putExtra("email", email)
         signInActivity.putExtra("password", password)
         startActivity(signInActivity)
